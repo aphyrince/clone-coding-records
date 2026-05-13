@@ -1,0 +1,54 @@
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #1a1a1a; /* 기본 검은색 배경 */
+    border-radius: 20px;
+    position: relative; /* 가상 요소의 기준점 */
+    overflow: hidden; /* 원이 카드 밖으로 나가지 않게 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* 두 원의 공통 스타일 */
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    filter: blur(50px); /* 블러 처리 */
+    opacity: 0; /* 처음에는 숨김 */
+    transition: opacity 0.5s ease;
+    z-index: -1; /* 텍스트 뒤로 보냄 */
+}
+
+/* 첫 번째 원 (왼쪽 상단) */
+.card::before {
+    top: -20px;
+    left: -20px;
+    background: rgba(255, 0, 150, 0.6); /* 분홍색 계열 */
+}
+
+/* 두 번째 원 (오른쪽 하단) */
+.card::after {
+    bottom: -20px;
+    right: -20px;
+    background: rgba(0, 200, 255, 0.6); /* 하늘색 계열 */
+}
+
+/* 마우스 호버 시 효과 */
+.card:hover::before,
+.card:hover::after {
+    opacity: 1; /* 블러 이미지가 서서히 나타남 */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* 선택사항: 살짝 위로 이동하는 효과 */
+}
