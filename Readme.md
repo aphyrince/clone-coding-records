@@ -4,4 +4,4 @@
 
 [frontend-joe](https://www.instagram.com/p/DX2h3RUDB-n/?img_index=2)
 
-<img src="gif/Login6.gif>
+<img src="gif/Login6.gif">
