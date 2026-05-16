@@ -1,9 +1,9 @@
-import Sk01 from "./card/sk01";
+import Login6 from "./login/Login6";
 
 const App = () => {
     return (
-        <div className="bg-black/95 w-100% h-screen flex justify-center p-10">
-            <Sk01 />
+        <div className="bg-base w-full h-dvh flex justify-center items-center">
+            <Login6 />
         </div>
     );
 };
